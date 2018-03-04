@@ -2,6 +2,7 @@ var AWS = require('aws-sdk');
 var fs = require('fs');
 var ts = require('tailstream');
 var exec = require('child_process').exec;
+var execSync = require('child_process').execSync;
 
 let credentials = new AWS.SharedIniFileCredentials({profile: 'default'});
 
@@ -26,6 +27,9 @@ var setupStream = function() {
      contentType: 'audio/l16; rate=16000; channels=1',
      inputStream: inputStream
    };
+
+   //play a dong sound before sending message to LEX API
+   execSync('aplay /home/pi/snowboy/rpi-arm-raspbian-8.0-1.2.0/resources/dong.wav');
 
    lexruntime.postContent(params, function(err, data) {
      if (err) {
