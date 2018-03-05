@@ -13,7 +13,7 @@ Follow the instructions till the end where it talks about wake word. You definit
 rather you would like to initiate the conversation when you say a wake word, same as you say "alexa" to start talking to your Amazon Echo devices.
 
 
-
+Once you have installed all the softwares following above link , clone this repo (https://github.com/just4give/raspi-dexter-lex-ai.git) to your Raspberry pi /home/pi directory. 
 
 Along with your lex client , you need to run a nodejs express server which will expose one REST API. Your lambda function ( which is invoked by Lex Bot to fullfill the request) will call this API asking Raspberry Pi to capture an image and load to S3 bucket. 
 
