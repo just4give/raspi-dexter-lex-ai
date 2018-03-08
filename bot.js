@@ -29,7 +29,7 @@ var setupStream = function() {
    };
 
    //play a dong sound before sending message to LEX API
-   execSync('aplay /home/pi/snowboy/rpi-arm-raspbian-8.0-1.2.0/resources/dong.wav');
+   //execSync('aplay /home/pi/snowboy/rpi-arm-raspbian-8.0-1.2.0/resources/dong.wav');
 
    lexruntime.postContent(params, function(err, data) {
      if (err) {
