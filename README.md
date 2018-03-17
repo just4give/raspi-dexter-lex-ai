@@ -15,7 +15,7 @@ rather you would like to initiate the conversation when you say a wake word, sam
 
 Once you have installed all the softwares following above link , clone this repo (https://github.com/just4give/raspi-dexter-lex-ai.git) to your Raspberry pi /home/pi directory.
 
-Along with your lex client , you need to run a nodejs express server (https://github.com/just4give/raspi-image-server.git) which will expose one REST API. Your lambda function ( which is invoked by Lex Bot to fullfill the request) will call this API asking Raspberry Pi to capture an image and load to S3 bucket.
+Along with your lex client , you need to run a nodejs express server (https://github.com/just4give/raspi-image-server.git) which will expose one REST API. Your lambda function ( which is invoked by Lex Bot to fullfill the request) will call this API asking Raspberry Pi to capture an image and load to S3 bucket. Checkout https://github.com/just4give/raspi-dexter-lambda.git for more about how I configured lambda with Lex.
 
 ```
 
@@ -29,3 +29,5 @@ sudo forever start /home/pi/raspi-image-server/server.js -o /home/pi/raspi-image
 You can achive this in few different ways.
 1. You can visit your home router admin page and add a port forward to make the port accessible through your gateway IP
 2. You can take a look at https://docs.dataplicity.com/docs  . They have very very simple installation process and make your PI accessible throug internet. Then you need to create a warmhole ( basically port forwarding) which will make port 80 accessible. Remember your image processing web server must be running on port 80. Usually Pi won't let you run your web server on port 80. So you need to start your server using sudo.
+
+### 
