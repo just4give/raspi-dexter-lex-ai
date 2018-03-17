@@ -1,5 +1,9 @@
 # raspi-dexter-lex-ai
 
+Watch the demo video below.
+
+[![Alt text for your video](https://img.youtube.com/vi/OO2m5dOIiR4/0.jpg)](http://www.youtube.com/watch?v=OO2m5dOIiR4)
+
 This is the codebase which runs on Raspberry pi and communicate with AWS Lex APIs
 
 To communicate with Lex API , you need to capture voice through a connected Speaker ( I used one 3.5 USB power speaker ) and send the voice to Lex API.
