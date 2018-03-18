@@ -6,6 +6,10 @@ Watch the demo video below.
 
 This is the codebase which runs on Raspberry pi and communicate with AWS Lex APIs
 
+Make sure you are not running legacy node js version on your pi. I have used 6.13.0 but I believe anything > 4.x would be fine.
+
+![alt tag](https://user-images.githubusercontent.com/9275193/37565948-fab4775a-2a88-11e8-8ec5-eca1a86aaab0.png)
+
 To communicate with Lex API , you need to capture voice through a connected Speaker ( I used one 3.5 USB power speaker ) and send the voice to Lex API.
 
 Follow below article from Amazon which explains step by step how to install all different sofwares on Raspberry Pi to connect to Lex API.
