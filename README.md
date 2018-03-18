@@ -23,6 +23,15 @@ rather you would like to initiate the conversation when you say a wake word, sam
 
 Once you have installed all the softwares following above link , clone this repo (https://github.com/just4give/raspi-dexter-lex-ai.git) to your Raspberry pi /home/pi directory.
 
+If you have followed the aws link above to setup lex and sox, you must have created a folder 
+```
+/home/pi/snowboy/rpi-arm-raspbian-8.0-1.2.0
+```
+Copy tintin-wake.py from this repo inside /home/pi/snowboy/rpi-arm-raspbian-8.0-1.2.0
+```
+tintin-wake.py
+```
+
 Along with your lex client , you need to run a nodejs express server (https://github.com/just4give/raspi-image-server.git) which will expose one REST API. Your lambda function ( which is invoked by Lex Bot to fullfill the request) will call this API asking Raspberry Pi to capture an image and load to S3 bucket. Checkout https://github.com/just4give/raspi-dexter-lambda.git for more about how I configured lambda with Lex.
 
 ```
